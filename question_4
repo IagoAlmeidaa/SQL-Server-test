@@ -1,0 +1,4 @@
+
+/* Updating description for tbtipoarea with id 12*/
+UPDATE tbtipoarea SET desctipoarea = 'Area condominial' WHERE codtipoarea = 12;
+

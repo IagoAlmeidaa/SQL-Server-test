@@ -1,0 +1,80 @@
+/* Adding tipo areas*/
+INSERT INTO tbtipoarea (
+    codtipoarea,
+    desctipoarea,
+    ativo
+) VALUES (
+    12,
+    'Area residencial',
+    'Y'
+);
+
+INSERT INTO tbtipoarea (
+    codtipoarea,
+    desctipoarea,
+    ativo
+) VALUES (
+    20,
+    'Area industrial',
+    'Y'
+);
+
+INSERT INTO tbtipoarea (
+    codtipoarea,
+    desctipoarea,
+    ativo
+) VALUES (
+    37,
+    'Area especial',
+    'N'
+);
+
+/* Adding areas */
+
+INSERT INTO tbarea (
+    codarea,
+    codtipoarea,
+    descarea,
+    datacriacao,
+    ativo
+) VALUES (
+    1,
+    12,
+    'Minha casa',
+    '2000-01-01',
+    'Y'
+);
+
+INSERT INTO tbarea (
+    codarea,
+    codtipoarea,
+    descarea,
+    datacriacao,
+    lastupdate,
+    ativo
+) VALUES (
+    2,
+    20,
+    'Minha empresa',
+    '1997-05-01',
+    '2019-01-01 23:30:59.997',
+    'Y'
+);
+
+INSERT INTO tbarea (
+    codarea,
+    codtipoarea,
+    descarea,
+    datacriacao,
+    ativo
+) VALUES (
+    3,
+    20,
+    'Empresa do amigo',
+    '2000-12-01',
+    'Y'
+);
+
+SELECT * FROM [dbo].[tbarea];
+
+SELECT * FROM tbtipoarea;

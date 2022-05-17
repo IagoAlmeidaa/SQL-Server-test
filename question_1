@@ -1,0 +1,36 @@
+/* Creating database/schema */
+CREATE DATABASE kersys;
+
+/* Creating table tbtipoarea */
+CREATE TABLE tbtipoarea (
+    codtipoarea INT NOT NULL,
+    desctipoarea VARCHAR(200) NOT NULL,
+    ativo CHAR(1) NOT NULL,
+    PRIMARY KEY (codtipoarea)
+);
+
+/* Creating table tbarea */
+CREATE TABLE tbarea (
+    codarea INT NOT NULL,
+    codtipoarea INT NOT NULL,
+    descarea VARCHAR(200) NOT NULL,
+    datacriacao DATE,
+    lastupdate DATETIME NOT NULL DEFAULT GETDATE(),
+    ativo CHAR(10) NOT NULL,
+    PRIMARY KEY (codarea),
+    FOREIGN KEY (codtipoarea) REFERENCES tbtipoarea(codtipoarea) 
+);
+
+
+
+
+
+
+
+
+
+-- CREATE VIEW
+CREATE VIEW myview AS
+SELECT tbtipoarea.desctipoarea AS desctipoarea , tbarea.descarea AS descarea, tbarea.datacriacao AS datacriacao, DATEDIFF(YEAR, tbarea.datacriacao, getDate()) AS idade
+FROM tbtipoarea, tbarea
+WHERE tbtipoarea.codtipoarea = tbarea.codtipoarea AND tbtipoarea.ativo = 'Y' AND tbtipoarea.ativo = 'Y' ;

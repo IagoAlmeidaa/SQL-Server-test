@@ -1,0 +1,9 @@
+-- CREATE VIEW
+
+CREATE VIEW myview AS
+SELECT tbtipoarea.desctipoarea AS desctipoarea , tbarea.descarea AS descarea, tbarea.datacriacao AS datacriacao, DATEDIFF(YEAR, tbarea.datacriacao, getDate()) AS idade
+FROM tbtipoarea, tbarea
+WHERE tbtipoarea.codtipoarea = tbarea.codtipoarea AND tbtipoarea.ativo = 'Y' AND tbtipoarea.ativo = 'Y' ;
+
+
+SELECT * FROM myview

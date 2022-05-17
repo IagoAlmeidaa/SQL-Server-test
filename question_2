@@ -1,0 +1,10 @@
+
+/* Unique index for tbtipoarea */
+CREATE UNIQUE INDEX desctipoarea_idx ON tbtipoarea(desctipoarea);
+
+/* Unique index for tbarea */
+CREATE UNIQUE INDEX descarea_idx ON tbarea(descarea);
+
+SELECT * FROM [dbo].[tbarea];
+
+SELECT * FROM tbtipoarea;
